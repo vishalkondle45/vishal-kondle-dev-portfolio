@@ -1,11 +1,11 @@
-import "@mantine/core/styles.css";
+import '@mantine/core/styles.css';
 
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import theme from "@/theme";
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import theme from '@/theme';
 
 export const metadata = {
-  title: "Vishal Kondle | Portfolio",
-  description: "This is the portfolio of Vishal Kondle",
+  title: 'Vishal Kondle | Portfolio',
+  description: 'This is the portfolio of Vishal Kondle'
 };
 
 interface LayoutProps {
