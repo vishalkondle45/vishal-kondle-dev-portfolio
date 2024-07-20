@@ -1,8 +1,23 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    optimizePackageImports: ['@mantine/core', '@mantine/hooks']
-  }
-};
+import bundleAnalyzer from '@next/bundle-analyzer';
 
-export default nextConfig;
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true'
+});
+
+export default withBundleAnalyzer({
+  reactStrictMode: false,
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  experimental: {
+    optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js'
+        }
+      }
+    }
+  }
+});
