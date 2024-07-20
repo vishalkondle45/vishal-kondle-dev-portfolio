@@ -14,18 +14,11 @@
     "*.mjs",
     "*.js"
   ],
-  "plugins": [
-    "testing-library",
-    "jest"
-  ],
+  "plugins": ["testing-library", "jest"],
   "overrides": [
     {
-      "files": [
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ],
-      "extends": [
-        "plugin:testing-library/react"
-      ]
+      "files": ["**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
     }
   ],
   "parserOptions": {
