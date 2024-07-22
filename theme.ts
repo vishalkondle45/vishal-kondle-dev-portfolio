@@ -1,7 +1,7 @@
 import { createTheme } from '@mantine/core';
 
 const theme = createTheme({
-  primaryColor: 'red',
+  primaryColor: 'blue',
   fontFamily: 'verdana, sans-serif'
 });
 
