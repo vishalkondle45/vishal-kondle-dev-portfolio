@@ -13,9 +13,9 @@ import {
   IconAt,
   IconCode,
   IconFileText,
-  IconPhone,
+  IconMapPinFilled,
   IconPhoneCall,
-  IconPinnedFilled
+  IconPhoneFilled
 } from '@tabler/icons-react';
 import classes from './Introduction.module.css';
 
@@ -35,8 +35,8 @@ export function Introduction() {
           <List mt={30} spacing="sm" size="md">
             <ListItem
               icon={
-                <ThemeIcon radius="xl">
-                  <IconCode className={classes.icon} stroke={1.5} />
+                <ThemeIcon radius="xl" variant="transparent">
+                  <IconCode className={classes.icon} stroke={3} />
                 </ThemeIcon>
               }
             >
@@ -51,19 +51,8 @@ export function Introduction() {
             </ListItem>
             <ListItem
               icon={
-                <ThemeIcon radius="xl">
-                  <IconPhone className={classes.icon} stroke={1.5} />
-                </ThemeIcon>
-              }
-            >
-              <Anchor fw={700} href="tel:+917276718848" c="dark">
-                +91 7276718848
-              </Anchor>
-            </ListItem>
-            <ListItem
-              icon={
-                <ThemeIcon radius="xl">
-                  <IconAt className={classes.icon} stroke={1.5} />
+                <ThemeIcon radius="xl" variant="transparent">
+                  <IconAt className={classes.icon} stroke={3} />
                 </ThemeIcon>
               }
             >
@@ -73,8 +62,19 @@ export function Introduction() {
             </ListItem>
             <ListItem
               icon={
-                <ThemeIcon radius="xl">
-                  <IconPinnedFilled className={classes.icon} stroke={1.5} />
+                <ThemeIcon radius="xl" variant="transparent">
+                  <IconPhoneFilled className={classes.icon} />
+                </ThemeIcon>
+              }
+            >
+              <Anchor fw={700} href="tel:+917276718848" c="dark">
+                +91 7276718848
+              </Anchor>
+            </ListItem>
+            <ListItem
+              icon={
+                <ThemeIcon radius="xl" variant="transparent">
+                  <IconMapPinFilled className={classes.icon} />
                 </ThemeIcon>
               }
             >
