@@ -27,7 +27,7 @@ export function Introduction() {
           <Title className={classes.title}>
             I&apos;m <span className={classes.highlight}>Vishal Kondle</span>
           </Title>
-          <Text ta="justify" c="dimmed" mt="md">
+          <Text ta="justify" mt="md">
             Hi there! My name is Vishal Kondle and I’m a software engineer with
             over 3 years of experience in the industry, specializing in building
             innovative web applications with ReactJS.
@@ -40,12 +40,7 @@ export function Introduction() {
                 </ThemeIcon>
               }
             >
-              <Anchor
-                fw={700}
-                target="_blank"
-                href="https://react.dev"
-                c="dark"
-              >
+              <Anchor fw={700} target="_blank" href="https://react.dev">
                 ReactJs Developer
               </Anchor>
             </ListItem>
@@ -56,7 +51,7 @@ export function Introduction() {
                 </ThemeIcon>
               }
             >
-              <Anchor fw={700} href="mailto:vishal.kondle@gmail.com" c="dark">
+              <Anchor fw={700} href="mailto:vishal.kondle@gmail.com">
                 vishal.kondle@gmail.com
               </Anchor>
             </ListItem>
@@ -67,7 +62,7 @@ export function Introduction() {
                 </ThemeIcon>
               }
             >
-              <Anchor fw={700} href="tel:+917276718848" c="dark">
+              <Anchor fw={700} href="tel:+917276718848">
                 +91 7276718848
               </Anchor>
             </ListItem>
@@ -82,7 +77,6 @@ export function Introduction() {
                 fw={700}
                 target="_blank"
                 href="https://www.google.com/maps/place/Hyderabad"
-                c="dark"
               >
                 Hyderabad, Telangana
               </Anchor>

@@ -20,7 +20,11 @@ export default function RootLayout({ children }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <MantineProvider theme={theme}>
+        <MantineProvider
+          theme={theme}
+          forceColorScheme="dark"
+          defaultColorScheme="dark"
+        >
           <Container size="xl">{children}</Container>
         </MantineProvider>
       </body>

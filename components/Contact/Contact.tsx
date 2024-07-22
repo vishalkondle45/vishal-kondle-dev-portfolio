@@ -29,18 +29,11 @@ export function Contact() {
   return (
     <>
       <form onSubmit={form.onSubmit(() => console.log(form.values))}>
-        <Title
-          order={2}
-          size="h1"
-          ff="Greycliff CF, var(--mantine-font-family)"
-          fw={900}
-          ta="center"
-          c="blue"
-        >
+        <Title order={3} fw={900} mb="md">
           Contact Me
         </Title>
 
-        <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
+        <SimpleGrid cols={{ base: 1, sm: 2 }}>
           <TextInput
             label="Name"
             placeholder="Your name"
