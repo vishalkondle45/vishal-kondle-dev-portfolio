@@ -86,7 +86,7 @@ export function Terminal() {
 
   return (
     <>
-      <Box>
+      <Box id="myterm" pt={80}>
         <Title order={3} mb="md">
           MyTerm
         </Title>
@@ -96,7 +96,11 @@ export function Terminal() {
             <ActionIcon size={rem(16)} radius="xl" color="yellow"></ActionIcon>
             <ActionIcon size={rem(16)} radius="xl" color="green"></ActionIcon>
           </Group>
-          <ScrollArea ff="monospace" viewportRef={viewport} h={400}>
+          <ScrollArea
+            ff="monospace"
+            viewportRef={viewport}
+            h={rem('calc(100vh - 200px)')}
+          >
             <Text fw={700}>
               Welcome to my website! Get started by typing `help` command below
             </Text>

@@ -28,6 +28,10 @@ export const skills = [
     icon: 'https://img-b.udemycdn.com/course/750x422/4966342_2dc0_16.jpg'
   },
   {
+    label: 'Unit Testing',
+    icon: 'https://spin.atomicobject.com/wp-content/uploads/jest.png'
+  },
+  {
     label: 'Node JS',
     icon: 'https://wallpapers.com/images/hd/node-j-s-logo-green-background-m9hanf62o04xrmi8.jpg'
   },
@@ -42,9 +46,5 @@ export const skills = [
   {
     label: 'MongoDB',
     icon: 'https://media.assettype.com/digitalterminal/2023-12/0fcc4160-139e-40c3-bc27-96bb485b6a17/MongoDB.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true'
-  },
-  {
-    label: 'Linux',
-    icon: 'https://download.logo.wine/logo/Linux/Linux-Logo.wine.png'
   }
 ];

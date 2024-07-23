@@ -1,10 +1,12 @@
 import {
   Anchor,
+  Box,
   Button,
   Group,
   Image,
   List,
   ListItem,
+  rem,
   Text,
   ThemeIcon,
   Title
@@ -21,7 +23,7 @@ import classes from './Introduction.module.css';
 
 export function Introduction() {
   return (
-    <>
+    <Box id="introduction" mt={rem(20)}>
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
@@ -113,6 +115,6 @@ export function Introduction() {
           />
         </Group>
       </div>
-    </>
+    </Box>
   );
 }

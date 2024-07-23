@@ -13,13 +13,13 @@ import {
 
 export function Skills() {
   return (
-    <Box>
+    <Box id="skills" pt={80}>
       <Title order={2} mb="md">
         Skills
       </Title>
       <SimpleGrid cols={{ base: 1, xs: 2, sm: 3, md: 4 }}>
         {skills.map((skill) => (
-          <Card shadow="xl" padding="sm" withBorder>
+          <Card key={skill.label} padding="sm" withBorder>
             <CardSection>
               <Image src={skill.icon} h={160} alt={skill.label} />
             </CardSection>

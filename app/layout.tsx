@@ -1,7 +1,7 @@
-import '@mantine/core/styles.css';
-
 import { ColorSchemeScript, Container, MantineProvider } from '@mantine/core';
 import theme from '@/theme';
+import '@mantine/core/styles.css';
+import { Layout } from '@/components/Layout';
 
 export const metadata = {
   title: 'Vishal Kondle | Portfolio',
@@ -22,10 +22,12 @@ export default function RootLayout({ children }: LayoutProps) {
       <body>
         <MantineProvider
           theme={theme}
-          forceColorScheme="light"
+          // forceColorScheme="light"
           defaultColorScheme="dark"
         >
-          <Container size="xl">{children}</Container>
+          <Container px={0} size="xl">
+            <Layout>{children}</Layout>
+          </Container>
         </MantineProvider>
       </body>
     </html>

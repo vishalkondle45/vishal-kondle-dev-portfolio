@@ -1,14 +1,14 @@
-import { rem, Stack } from '@mantine/core';
 import { Contact } from '@/components/Contact';
 import { Introduction } from '@/components/Introduction';
-import styles from './page.module.css';
-import { Terminal } from '@/components/Terminal';
 import { Skills } from '@/components/Skills';
+import { Terminal } from '@/components/Terminal';
+import { Stack } from '@mantine/core';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Stack gap={rem(100)} py="xl">
+      <Stack>
         <Introduction />
         <Skills />
         <Terminal />

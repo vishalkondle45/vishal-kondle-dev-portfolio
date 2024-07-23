@@ -1,6 +1,7 @@
 'use client';
 
 import {
+  Box,
   Button,
   Group,
   SimpleGrid,
@@ -27,7 +28,7 @@ export function Contact() {
   });
 
   return (
-    <>
+    <Box id="contact" pt={80} pb={270}>
       <form onSubmit={form.onSubmit(() => console.log(form.values))}>
         <Title order={3} fw={900} mb="md">
           Contact Me
@@ -76,6 +77,6 @@ export function Contact() {
           </Button>
         </Group>
       </form>
-    </>
+    </Box>
   );
 }
