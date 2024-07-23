@@ -12,6 +12,7 @@ import {
   Title
 } from '@mantine/core';
 import { useRef, useState } from 'react';
+import dayjs from 'dayjs';
 import './Terminal.module.css';
 
 export function Terminal() {
@@ -30,17 +31,46 @@ export function Terminal() {
       case 'help':
         setCommands([
           ...commands,
-          { command, response: 'Available commands: clear | help | whoami' }
+          {
+            command,
+            response: `Available commands:<br/>
+            clear : clear the terminal<br/>
+            help : show this help<br/>
+            exit : exit the terminal
+            `
+          }
+        ]);
+        break;
+
+      case 'exit':
+        setCommands([...commands, { command, response: `Bye!` }]);
+        window.close();
+        break;
+
+      case 'time':
+        setCommands([
+          ...commands,
+          {
+            command,
+            response: `${dayjs().format('HH:mm:ss A')}`
+          }
+        ]);
+        break;
+
+      case 'date':
+        setCommands([
+          ...commands,
+          {
+            command,
+            response: `${dayjs().format('DD-MMM-YYYY')}`
+          }
         ]);
         break;
 
       default:
         setCommands([
           ...commands,
-          {
-            command,
-            response: `${command}: command not found`
-          }
+          { command, response: `${command}: command not found` }
         ]);
         break;
     }
@@ -62,15 +92,15 @@ export function Terminal() {
           MyTerm
         </Title>
         <Paper p="xs" shadow="xl" withBorder>
-          <Group gap="xs">
+          <Group pb="xs" gap="xs">
             <ActionIcon size={rem(16)} radius="xl" color="red"></ActionIcon>
             <ActionIcon size={rem(16)} radius="xl" color="yellow"></ActionIcon>
             <ActionIcon size={rem(16)} radius="xl" color="green"></ActionIcon>
           </Group>
-          <Text fw={700} my="md">
-            Welcome to my website! Get started by typing `help` command below
-          </Text>
           <ScrollArea ff="monospace" viewportRef={viewport} h={400}>
+            <Text fw={700}>
+              Welcome to my website! Get started by typing `help` command below
+            </Text>
             {commands.map((cmd, index) => (
               <Box mb="sm" key={index}>
                 <TextInput
@@ -89,11 +119,10 @@ export function Terminal() {
                 <Text
                   px={rem(4)}
                   fw={700}
-                  c={cmd?.response.includes('not') ? 'red' : 'gray'}
+                  c={cmd?.response.includes('not') ? 'red' : 'yellow'}
                   ff="monospace"
-                >
-                  {cmd?.response}
-                </Text>
+                  dangerouslySetInnerHTML={{ __html: cmd?.response }}
+                />
               </Box>
             ))}
             <TextInput

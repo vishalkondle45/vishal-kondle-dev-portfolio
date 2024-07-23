@@ -48,6 +48,10 @@
     width: rem(300px);
     height: rem(300px);
   }
+  @media (max-width: $mantine-breakpoint-md) {
+    width: rem(350px);
+    height: rem(350px);
+  }
 }
 
 .highlight {
