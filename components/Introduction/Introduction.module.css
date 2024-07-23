@@ -42,8 +42,8 @@
 }
 
 .image {
-  width: rem(450px);
-  height: rem(450px);
+  width: rem(420px);
+  height: rem(420px);
   @media (max-width: $mantine-breakpoint-sm) {
     width: rem(300px);
     height: rem(300px);

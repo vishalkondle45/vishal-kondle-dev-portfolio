@@ -13,7 +13,6 @@ import {
 } from '@mantine/core';
 import { useRef, useState } from 'react';
 import dayjs from 'dayjs';
-import './Terminal.module.css';
 
 export function Terminal() {
   const [command, setCommand] = useState('');
