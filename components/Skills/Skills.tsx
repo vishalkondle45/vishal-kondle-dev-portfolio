@@ -1,6 +1,5 @@
 'use client';
 
-import { skills } from '@/constants';
 import {
   Box,
   Card,
@@ -10,6 +9,7 @@ import {
   Text,
   Title
 } from '@mantine/core';
+import { skills } from '@/constants';
 
 export function Skills() {
   return (

@@ -13,7 +13,7 @@
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "jest": "jest",
     "jest:watch": "jest --watch",
-    "test": "yarn prettier:check && yarn lint --fix && yarn typecheck && yarn jest",
+    "test": "yarn prettier:check && yarn lint --fix && git add . && yarn typecheck && yarn jest",
     "format": "npx prettier --write .",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
