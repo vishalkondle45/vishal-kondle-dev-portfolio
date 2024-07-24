@@ -10,6 +10,8 @@ import {
   Title
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { notifications } from '@mantine/notifications';
+import { IconCheck } from '@tabler/icons-react';
 
 export function Contact() {
   const form = useForm({
@@ -27,9 +29,18 @@ export function Contact() {
     }
   });
 
+  const onSubmit = () => {
+    notifications.show({
+      icon: <IconCheck stroke={4} />,
+      color: 'green',
+      title: 'Thank you for contacting me',
+      message: 'I will get back to you soon.'
+    });
+  };
+
   return (
-    <Box id="contact" pt={80} pb={270}>
-      <form onSubmit={form.onSubmit(() => console.log(form.values))}>
+    <Box id="contact" pt={80}>
+      <form onSubmit={form.onSubmit(() => onSubmit())}>
         <Title order={3} fw={900} mb="md">
           Contact Me
         </Title>

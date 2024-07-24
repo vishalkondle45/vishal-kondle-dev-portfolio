@@ -1,6 +1,8 @@
 import { ColorSchemeScript, Container, MantineProvider } from '@mantine/core';
+import { Notifications } from '@mantine/notifications';
 import theme from '@/theme';
 import '@mantine/core/styles.css';
+import '@mantine/notifications/styles.css';
 import { Layout } from '@/components/Layout';
 
 export const metadata = {
@@ -20,11 +22,8 @@ export default function RootLayout({ children }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <MantineProvider
-          theme={theme}
-          // forceColorScheme="light"
-          defaultColorScheme="dark"
-        >
+        <MantineProvider theme={theme} defaultColorScheme="dark">
+          <Notifications />
           <Container px={0} size="xl">
             <Layout>{children}</Layout>
           </Container>
