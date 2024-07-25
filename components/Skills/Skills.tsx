@@ -2,11 +2,11 @@
 
 import {
   Box,
-  Card,
-  CardSection,
-  Image,
+  Group,
+  Paper,
   SimpleGrid,
   Text,
+  ThemeIcon,
   Title
 } from '@mantine/core';
 import { skills } from '@/constants';
@@ -17,16 +17,16 @@ export function Skills() {
       <Title order={2} mb="md">
         Skills
       </Title>
-      <SimpleGrid cols={{ base: 1, xs: 2, sm: 3, md: 4 }}>
-        {skills.map((skill) => (
-          <Card key={skill.label} padding="sm" withBorder>
-            <CardSection>
-              <Image src={skill.icon} h={160} alt={skill.label} />
-            </CardSection>
-            <Text fw={700} size="lg" ta="center" mt="md">
-              {skill.label}
-            </Text>
-          </Card>
+      <SimpleGrid cols={{ base: 2, xs: 3, sm: 4, md: 5, lg: 6 }}>
+        {skills.map(({ label, icon, color }) => (
+          <Paper key={label} p="md" withBorder>
+            <Group wrap="nowrap">
+              <ThemeIcon variant="filled" radius="xl" size={32} color={color}>
+                {icon}
+              </ThemeIcon>
+              <Text fw={700}>{label}</Text>
+            </Group>
+          </Paper>
         ))}
       </SimpleGrid>
     </Box>

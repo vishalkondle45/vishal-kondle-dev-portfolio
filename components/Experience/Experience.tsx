@@ -5,7 +5,7 @@ import { ExperienceItem } from './ExperienceItem';
 
 export function Experience() {
   return (
-    <Box id="projects" pt={80}>
+    <Box id="experience" pt={80}>
       <Title order={3} fw={900} mb="md">
         Experience
       </Title>

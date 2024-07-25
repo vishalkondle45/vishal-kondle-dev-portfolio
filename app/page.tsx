@@ -1,22 +1,18 @@
-import { Stack } from '@mantine/core';
-import { Contact } from '@/components/Contact';
-import { Introduction } from '@/components/Introduction';
-import { Skills } from '@/components/Skills';
-import { Terminal } from '@/components/Terminal';
-import styles from './page.module.css';
-import { Projects } from '@/components/Projects';
+import { rem, Stack } from '@mantine/core';
 import { Experience } from '@/components/Experience';
+import { Introduction } from '@/components/Introduction';
+import { Projects } from '@/components/Projects';
+import { Skills } from '@/components/Skills';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Stack>
+      <Stack mb={rem(600)}>
         <Introduction />
         <Experience />
         <Projects />
         <Skills />
-        <Terminal />
-        <Contact />
       </Stack>
     </main>
   );

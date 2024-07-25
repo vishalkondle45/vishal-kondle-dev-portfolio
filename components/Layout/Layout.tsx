@@ -16,6 +16,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconBrandVk, IconMoon, IconSun } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';
 import { useLoaded } from '@/hooks/useLoaded';
+import { navItems } from '@/constants';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const { setColorScheme, colorScheme } = useMantineColorScheme({
@@ -66,18 +67,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 Vishal Kondle
               </Badge>
               <Group ml="xl" gap={0} visibleFrom="sm">
-                <Button onClick={() => navigateTo('/')} variant="subtle">
-                  Home
-                </Button>
-                <Button variant="subtle" onClick={() => navigateTo('#skills')}>
-                  Skills
-                </Button>
-                <Button variant="subtle" onClick={() => navigateTo('#myterm')}>
-                  MyTerm
-                </Button>
-                <Button variant="subtle" onClick={() => navigateTo('#contact')}>
-                  Contact
-                </Button>
+                {navItems.map((item) => (
+                  <Button
+                    key={item.label}
+                    variant="subtle"
+                    onClick={() => navigateTo(item.link)}
+                  >
+                    {item.label}
+                  </Button>
+                ))}
               </Group>
             </Group>
             {loaded && (
@@ -109,18 +107,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </AppShell.Header>
 
       <AppShell.Navbar py="md" px={4}>
-        <Button onClick={() => navigateTo('/')} variant="subtle">
-          Home
-        </Button>
-        <Button variant="subtle" onClick={() => navigateTo('#skills')}>
-          Skills
-        </Button>
-        <Button variant="subtle" onClick={() => navigateTo('#myterm')}>
-          MyTerm
-        </Button>
-        <Button variant="subtle" onClick={() => navigateTo('#contact')}>
-          Contact
-        </Button>
+        {navItems.map((item) => (
+          <Button
+            key={item.label}
+            variant="subtle"
+            onClick={() => navigateTo(item.link)}
+          >
+            {item.label}
+          </Button>
+        ))}
       </AppShell.Navbar>
 
       <AppShell.Main>{children}</AppShell.Main>
