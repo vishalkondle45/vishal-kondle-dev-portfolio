@@ -3,14 +3,17 @@ import {
   IconBrandAws,
   IconBrandCss3,
   IconBrandGit,
+  IconBrandGithubFilled,
   IconBrandHtml5,
   IconBrandJavascript,
+  IconBrandLinkedin,
   IconBrandMongodb,
   IconBrandNextjs,
   IconBrandNodejs,
   IconBrandReact,
   IconBrandRedux,
   IconBrandTypescript,
+  IconBrandXFilled,
   IconTestPipe
 } from '@tabler/icons-react';
 
@@ -56,14 +59,14 @@ export const skills = [
     color: 'green'
   },
   {
-    label: 'AWS',
-    icon: <IconBrandAws style={{ width: rem(20), height: rem(20) }} />,
-    color: 'orange'
-  },
-  {
     label: 'MongoDB',
     icon: <IconBrandMongodb style={{ width: rem(20), height: rem(20) }} />,
     color: 'green'
+  },
+  {
+    label: 'AWS',
+    icon: <IconBrandAws style={{ width: rem(20), height: rem(20) }} />,
+    color: 'orange'
   },
   {
     label: 'CSS',
@@ -93,5 +96,26 @@ export const navItems = [
   {
     label: 'Skills',
     link: '#skills'
+  }
+];
+
+export const socials = [
+  {
+    label: 'X',
+    link: 'https://twitter.com/vishalkondle',
+    icon: <IconBrandXFilled style={{ width: rem(20), height: rem(20) }} />,
+    color: 'dark'
+  },
+  {
+    label: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/vishal-kondle/',
+    icon: <IconBrandLinkedin style={{ width: rem(20), height: rem(20) }} />,
+    color: 'blue'
+  },
+  {
+    label: 'GitHub',
+    link: 'https://github.com/vishalkondle45',
+    icon: <IconBrandGithubFilled style={{ width: rem(20), height: rem(20) }} />,
+    color: 'dark'
   }
 ];

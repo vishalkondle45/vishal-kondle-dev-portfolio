@@ -8,6 +8,7 @@ import {
   ListItem,
   Paper,
   rem,
+  Stack,
   Text,
   ThemeIcon,
   Title
@@ -29,12 +30,14 @@ export function ExperienceItem({
 }: ProjectProps) {
   return (
     <Paper p="md" withBorder>
-      <Image alt="UBS Logo" src={logo} w={200} h={70} radius="md" />
-      <Group gap={0} justify="space-between">
-        <Title order={5}>{name}</Title>
-        <Text fw={700} c="dimmed" ta="right">
-          {_role}
-        </Text>
+      <Group justify="space-between">
+        <Image alt="Wipro Logo" src={logo} w={200} h={70} radius="md" />
+        <Stack gap={0}>
+          <Title order={5}>{name}</Title>
+          <Text fw={700} c="dimmed">
+            {_role}
+          </Text>
+        </Stack>
       </Group>
       <Divider my="md" />
       <List

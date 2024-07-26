@@ -111,7 +111,7 @@ export function Introduction() {
           <Image
             radius="50%"
             className={classes.image}
-            src="https://vishalkondle-dev.s3.eu-north-1.amazonaws.com/vishal_kondle.jpg"
+            src="https://vishal-kondle-dev-portfolio.s3.eu-north-1.amazonaws.com/vishal_kondle.jpg"
           />
         </Group>
       </div>

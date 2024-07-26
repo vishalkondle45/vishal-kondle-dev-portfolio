@@ -12,25 +12,27 @@ export function Projects() {
 
       <SimpleGrid cols={{ base: 1, sm: 2 }}>
         <Project
-          logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/UBS_Logo.png/800px-UBS_Logo.png"
+          logo="https://vishal-kondle-dev-portfolio.s3.eu-north-1.amazonaws.com/ubs.png"
           name="Regulatory Reports Framework"
           _role="ReactJs developer"
           responsibilites={[
-            'Developed a highly responsive & scaled application for optum clients for their new application shop and search.',
-            'Created a complex component like multi-level Tree structure without using any third party library.',
             'Migrated UBS-RRF React components to TypeScript and added full test coverage.',
-            'Wrote unit test cases for all the components with the 86.00% coverage with jest & enzyme .'
+            'Used Media Queries for the design to be compatible with different screen sizes.',
+            'Implemented state management using Redux to manage complex application state and improve performance.',
+            'Developed a reusable component library to improve application development and maintainability.',
+            'Implemented the Drag and Drop functionality using React-Draggable'
           ]}
         />
         <Project
-          logo="https://appexchange.salesforce.com/image_host/2ff34cad-ef49-463a-b2d4-11d3680a293c.png"
+          logo="https://vishal-kondle-dev-portfolio.s3.eu-north-1.amazonaws.com/optum.png"
           name="Shop and Search"
           _role="NextJs developer"
           responsibilites={[
-            'Migrated UBS-RRF React components to TypeScript and added full test coverage.',
             'Developed a highly responsive & scaled application for optum clients for their new application shop and search.',
-            'Wrote unit test cases for all the components with the 86.00% coverage with jest & enzyme .',
-            'Created a complex component like multi-level Tree structure without using any third party library.'
+            'Implemented a robust testing suite using Jest and React Testing Library, achieving 95% code coverage.',
+            'Implemented accessibility features (WCAG 2.1) to improve user experience for people with disabilities.',
+            'Implemented custom hooks for reusable logic, improving code maintainability and reducing development time.',
+            'Integrated API calls using Axios to fetch data from database.'
           ]}
         />
       </SimpleGrid>

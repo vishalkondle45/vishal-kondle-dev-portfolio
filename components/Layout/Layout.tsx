@@ -15,8 +15,9 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { IconBrandVk, IconMoon, IconSun } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';
-import { useLoaded } from '@/hooks/useLoaded';
+import { Footer } from '../Footer';
 import { navItems } from '@/constants';
+import { useLoaded } from '@/hooks/useLoaded';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const { setColorScheme, colorScheme } = useMantineColorScheme({
@@ -40,6 +41,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         collapsed: { desktop: true, mobile: !opened }
       }}
       padding="md"
+      // footer={{
+      //   offset: true,
+      //   height: 70
+      // }}
     >
       <AppShell.Header>
         <Container pt="sm" px={0} size="xl">
@@ -119,6 +124,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </AppShell.Navbar>
 
       <AppShell.Main>{children}</AppShell.Main>
+
+      <AppShell.Footer>
+        <Footer />
+      </AppShell.Footer>
     </AppShell>
   );
 }

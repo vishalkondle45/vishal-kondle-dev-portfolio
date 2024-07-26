@@ -8,6 +8,7 @@ import {
   ListItem,
   Paper,
   rem,
+  Stack,
   Text,
   ThemeIcon,
   Title
@@ -24,12 +25,14 @@ interface ProjectProps {
 export function Project({ logo, name, _role, responsibilites }: ProjectProps) {
   return (
     <Paper p="md" withBorder>
-      <Image alt="UBS Logo" src={logo} w={200} h={70} radius="md" />
       <Group gap={0} justify="space-between">
-        <Title order={5}>{name}</Title>
-        <Text fw={700} c="dimmed" ta="right">
-          {_role}
-        </Text>
+        <Image alt={name} src={logo} w={200} h={40} radius="md" />
+        <Stack gap={0}>
+          <Title order={5}>{name}</Title>
+          <Text fw={700} c="dimmed">
+            {_role}
+          </Text>
+        </Stack>
       </Group>
       <Divider my="md" />
       <List
@@ -46,7 +49,7 @@ export function Project({ logo, name, _role, responsibilites }: ProjectProps) {
           <ListItem
             styles={{
               itemWrapper: { alignItems: 'flex-start' },
-              itemLabel: { lineHeight: 1.2 }
+              itemLabel: { lineHeight: 1.2, textAlign: 'justify' }
             }}
             key={responsibility}
           >
